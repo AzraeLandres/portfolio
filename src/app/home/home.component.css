@@ -1,0 +1,30 @@
+.bottom {
+  height: 100%;
+  width: 90%;
+  padding: 2rem 1rem;
+  margin-top: 1%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  font-family: "Quicksand";
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-family: "Quicksand";
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 600px) {
+  .bottom {
+    width: 100%;
+  }
+
+  h1 {
+    margin-bottom: 1.5rem;
+  }
+}

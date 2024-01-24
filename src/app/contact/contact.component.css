@@ -1,0 +1,69 @@
+* {
+  font-family: "Quicksand";
+}
+
+h1 {
+  text-align: center;
+  color: var(--black);
+  margin-top: 1rem;
+}
+
+.bottom {
+  flex-direction: column;
+}
+form {
+  width: 100%;
+  padding: 1rem;
+}
+
+fieldset {
+  border: none;
+}
+
+.inputContainer {
+  display: inline-block;
+  width: 50%;
+  margin-bottom: 1rem;
+}
+
+.full {
+  width: 100%;
+}
+label {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  font-size: 16px;
+  padding: 5px 10px;
+
+  width: 90%;
+  outline: none;
+  background: #ffffff00;
+  color: var(--black);
+  border: none;
+  border-bottom: 1px solid var(--darkPurple);
+  transition: 0.3s ease;
+}
+
+input:focus {
+  background: #ffffff;
+  border: 1px solid var(--darkPurple);
+  border-radius: 1rem;
+}
+#subject {
+  width: 95%;
+}
+
+textarea {
+  margin-top: 1rem;
+  width: 95%;
+  border: 1px solid var(--darkPurple);
+  border-radius: 0.5rem;
+}
+
+.btnContainer {
+  text-align: center;
+}

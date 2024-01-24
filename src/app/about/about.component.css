@@ -1,0 +1,226 @@
+/* Global  */
+
+* {
+  font-family: "Quicksand";
+}
+
+.container {
+  width: 85%;
+  height: fit-content;
+  flex-direction: column;
+  margin: 1rem auto;
+}
+
+.containerTop {
+  width: 100%;
+  height: 70vh;
+}
+
+.containerBottom {
+  width: 100%;
+}
+
+/*************************************/
+
+/* Window Adaptations */
+
+.circles {
+  width: 3rem;
+  margin-right: 1rem;
+}
+
+.circle {
+  height: 0.5rem;
+  width: 0.5rem;
+}
+
+.tab {
+  width: 9rem;
+}
+
+/*************************************/
+
+/*First window */
+
+.topLeft {
+  width: 20%;
+  height: min-content;
+}
+
+.item-a {
+  width: 15rem;
+}
+
+.imageBox {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+img {
+  width: 8rem;
+  margin-bottom: 1rem;
+}
+
+/*************************************/
+
+/*Second window */
+
+.topMiddle {
+  width: 40%;
+  height: min-content;
+}
+
+.item-b {
+  width: 22rem;
+  margin-top: 7rem;
+  margin-bottom: 0;
+  margin-right: 0;
+}
+
+.topMiddleBottom {
+  margin: 1rem;
+}
+
+.topMiddleBottom h2 {
+  margin: 1rem 0;
+}
+
+/*************************************/
+
+/*Third window*/
+
+.topRight {
+  width: 40%;
+  height: min-content;
+}
+
+.item-c {
+  width: fit-content;
+}
+
+.topRightBottom {
+  margin: 1.5rem;
+}
+
+.topRightBottom h2 {
+  margin: 1rem 0;
+}
+
+.icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.link a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+/*************************************/
+
+/*4th window*/
+
+.bottomLeft {
+  width: calc(100% / 2);
+  height: min-content;
+}
+
+.item-d {
+  width: 30rem;
+  margin-left: 0;
+}
+
+.bottomLeftBottom {
+  margin: 1rem;
+}
+
+.bottomLeftBottom h2 {
+  margin: 1rem 0;
+}
+/*************************************/
+
+/*5th window*/
+
+.bottomRight {
+  width: calc(100% / 2);
+  height: 100%;
+}
+
+.item-e {
+  width: 30rem;
+  height: min-content;
+  margin: 0;
+}
+
+.bottomRightBottom {
+  margin: 2rem;
+}
+
+.bottomRightBottom h2 {
+  margin: 1rem 0;
+}
+
+@media (min-height: 600px) {
+  .container {
+    width: 60%;
+  }
+
+  .containerTop {
+    height: 45vh;
+  }
+
+  .item-a {
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+
+  .item-b {
+    margin-top: 6rem;
+    margin-bottom: 0;
+    margin-left: 2;
+  }
+
+  .item-c {
+    margin-top: 2rem;
+  }
+
+  .item-d {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+  .containerTop,
+  .containerBottom {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .containerTop {
+    height: 50%;
+  }
+  .topLeft,
+  .topMiddle,
+  .topRight,
+  .bottomLeft,
+  .bottomRight {
+    width: 100%;
+    margin: auto;
+  }
+
+  .item-a,
+  .item-b,
+  .item-c,
+  .item-d,
+  .item-e {
+    width: 20rem;
+    margin: 1rem auto;
+  }
+}

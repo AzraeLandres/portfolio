@@ -1,1 +1,217 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --lightPurple: #bcabd3;
+  --darkPurple: #8873a6;
+  --lightYellow: #f8ee8f;
+  --darkYellow: #e3dc91;
+  --lightBlue: #8fc6f8;
+  --darkBlue: #91ade3;
+  --lightOrange: #f0caa4;
+  --darkOrange: #edb174;
+  --lightRed: #f88f8f;
+  --darkRed: #e37c7c;
+  --lightGreen: #a2d7b7;
+  --darkGreen: #76ba91;
+  --lightPink: #f0b4d8;
+  --darkPink: #d091b7;
+  --redBtn: #f0a4a4;
+  --black: #363636;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Quicksand";
+}
+
+body {
+  background-image: url(./assets/fond.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 98vh;
+}
+
+.flex {
+  display: flex;
+}
+.window {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 50%;
+  height: min-content;
+  margin: 3em auto;
+
+  flex-direction: column;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 10px 0px rgb(223, 223, 223);
+}
+
+.top {
+  width: 100%;
+  height: 3.5rem;
+
+  justify-content: start;
+  border-bottom: 1px solid #f2f2f2;
+  padding: 1rem;
+}
+
+.circles {
+  width: 15%;
+
+  justify-content: start;
+  align-items: center;
+}
+
+.circle {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.red {
+  background-color: var(--redBtn);
+}
+
+.yellow {
+  background-color: var(--lightOrange);
+}
+
+.green {
+  background-color: var(--lightGreen);
+}
+
+.tab {
+  height: 2.5rem;
+  width: 7rem;
+  background-color: #f2f2f2;
+  display: flex;
+
+  align-items: center;
+}
+
+#ico {
+  display: inline-block;
+  padding: 0 0.5rem;
+  height: 1.2rem;
+}
+#logo {
+  width: 1rem;
+  margin: 0 auto;
+}
+#span {
+  font-family: "Quicksand";
+  display: inline-block;
+  width: 60%;
+}
+
+.btn {
+  font-family: "Quicksand";
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 50px;
+  transition: 200ms;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: solid 5px var(--darkPurple);
+  width: 9.5rem;
+  padding: 0.4rem 0;
+}
+
+.empty {
+  color: var(--darkPurple);
+  background-color: rgba(0, 0, 0, 0);
+  margin-right: 1rem;
+}
+
+.empty:hover {
+  background-color: var(--darkPurple);
+  color: #ffffff;
+}
+
+.purple {
+  background-color: var(--lightPurple);
+  color: #ffffff;
+}
+
+.purple:hover {
+  color: var(--darkPurple);
+  background-color: rgba(0, 0, 0, 0);
+}
+@media (min-height: 600px) {
+  .window {
+    width: 40%;
+    height: min-content;
+    margin: 8rem auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .window {
+    width: 80%;
+    height: min-content;
+    margin: 6em auto;
+  }
+
+  .top {
+    display: none;
+  }
+
+  .btn:first-of-type {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 970px) {
+  .window {
+    width: 80%;
+    height: min-content;
+    margin: 6em auto;
+  }
+}
+
+/* TAGS (might move)*/
+.blue {
+  background-color: var(--lightBlue);
+  border: solid 5px var(--darkBlue);
+}
+
+.orange {
+  background-color: var(--lightOrange);
+  border: solid 5px var(--darkOrange);
+}
+
+.pink {
+  background-color: var(--lightPink);
+  border: solid 5px var(--darkPink);
+}
+
+.yellowTag {
+  background-color: var(--lightYellow);
+  border: solid 5px var(--darkYellow);
+}
+
+.redTag {
+  background-color: var(--lightRed);
+  border: solid 5px var(--darkRed);
+}
+
+.greenTag {
+  background-color: var(--lightGreen);
+  border: solid 5px var(--darkGreen);
+}
+
+.purpleTag {
+  background-color: var(--lightPurple);
+  border: solid 5px var(--darkPurple);
+}
+.tags {
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 1rem;
+}
+.tag {
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 50px;
+  width: fit-content;
+  padding: 0.4rem 2rem;
+}

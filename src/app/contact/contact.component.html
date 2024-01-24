@@ -1,0 +1,142 @@
+<div class="window flex">
+  <div class="top flex">
+    <div class="circles flex">
+      <div class="circle red"></div>
+      <div class="circle yellow"></div>
+      <div class="circle green"></div>
+    </div>
+    <div class="tab">
+      <div id="ico"><img id="logo" src="../assets/logoP.svg" alt="" /></div>
+      <span id="span">Contact</span>
+    </div>
+  </div>
+
+  <div class="bottom flex">
+    <h1>Contact</h1>
+    <form
+      (ngSubmit)="contactForm.valid && onSubmit()"
+      [formGroup]="contactForm"
+      #myForm="ngForm"
+    >
+      <fieldset>
+        <div class="inputContainer">
+          <label for="firstName">Prénom :</label>
+          <input
+            type="text"
+            name="firstName"
+            id="firstName"
+            formControlName="firstName"
+          />
+          <div
+            *ngIf="myForm.submitted && contactForm.controls['firstName'].errors"
+          >
+            <span *ngIf="contactForm.controls['firstName'].errors?.['required']"
+              >Ce champ est requis</span
+            >
+          </div>
+        </div>
+        <div class="inputContainer">
+          <label for="lastName">Nom : </label>
+          <input
+            type="text"
+            name="lastName"
+            id="lastName"
+            formControlName="lastName"
+          />
+          <div
+            *ngIf="myForm.submitted && contactForm.controls['lastName'].errors"
+          >
+            <span *ngIf="contactForm.controls['lastName'].errors?.['required']"
+              >Ce champ est requis</span
+            >
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <div class="inputContainer">
+          <label for="phoneNumber">Numéro de téléphone :</label>
+          <input
+            type="tel"
+            name="phoneNumber"
+            id="phoneNumber"
+            formControlName="phoneNumber"
+          />
+          <div
+            *ngIf="
+              myForm.submitted && contactForm.controls['phoneNumber'].errors
+            "
+          >
+            <span
+              *ngIf="contactForm.controls['phoneNumber'].errors?.['required']"
+              >Ce champ est requis</span
+            >
+          </div>
+        </div>
+
+        <div class="inputContainer">
+          <label for="emailAddress">Adresse email : </label>
+          <input
+            type="email"
+            name="emailAddress"
+            id="emailAddress"
+            formControlName="emailAddress"
+          />
+          <div
+            *ngIf="
+              myForm.submitted && contactForm.controls['emailAddress'].errors
+            "
+          >
+            <span
+              *ngIf="contactForm.controls['emailAddress'].errors?.['required']"
+              >Ce champ est requis</span
+            >
+            <span *ngIf="contactForm.controls['emailAddress'].errors?.['email']"
+              >L'adresse email doit être valide</span
+            >
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <div class="inputContainer full">
+          <label for="subject">Objet :</label>
+          <input
+            type="text"
+            name="subject"
+            id="subject"
+            formControlName="subject"
+          />
+          <div
+            *ngIf="myForm.submitted && contactForm.controls['subject'].errors"
+          >
+            <span *ngIf="contactForm.controls['subject'].errors?.['required']"
+              >Ce champ est requis</span
+            >
+          </div>
+        </div>
+
+        <div class="inputContainer full">
+          <label for="message">Message : </label>
+          <textarea
+            name="message"
+            id="message"
+            rows="10"
+            formControlName="message"
+          ></textarea>
+          <div
+            *ngIf="myForm.submitted && contactForm.controls['message'].errors"
+          >
+            <span *ngIf="contactForm.controls['message'].errors?.['required']"
+              >Ce champ est requis</span
+            >
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="btnContainer">
+        <button type="submit" class="btn purple">Envoyer</button>
+      </div>
+    </form>
+  </div>
+</div>
