@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { FormsModule } from '@angular/forms';
+import { APP_BASE_HREF } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { FormsModule } from '@angular/forms';
     PortfolioComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, FormsModule],
-  providers: [],
+  providers: [{ provide: APP_BASE_HREF, useValue: '/portfolio-azrael' }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
