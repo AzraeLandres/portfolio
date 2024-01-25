@@ -8,6 +8,7 @@ import {
 
 @Component({
   selector: 'app-contact',
+
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css',
 })
