@@ -75,5 +75,19 @@ textarea:focus {
   color: var(--darkOrange);
 }
 .btnContainer {
+  display: flex;
   text-align: center;
+  justify-content: center;
+}
+
+.btn {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  border-radius: 3rem;
+  width: 9.5rem;
+  height: 2.5rem;
+  border: 4px solid var(--darkPurple);
+  background-color: var(--lightPurple);
 }
