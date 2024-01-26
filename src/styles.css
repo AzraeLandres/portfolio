@@ -103,39 +103,6 @@ body {
   width: 60%;
 }
 
-.btn {
-  font-family: "Quicksand";
-  font-weight: 600;
-  font-size: 1rem;
-  border-radius: 50px;
-  transition: 200ms;
-  cursor: pointer;
-  text-transform: uppercase;
-  border: solid 5px var(--darkPurple);
-  width: 9.5rem;
-  padding: 0.4rem 0;
-}
-
-.empty {
-  color: var(--darkPurple);
-  background-color: rgba(0, 0, 0, 0);
-  margin-right: 1rem;
-}
-
-.empty:hover {
-  background-color: var(--darkPurple);
-  color: #ffffff;
-}
-
-.purple {
-  background-color: var(--lightPurple);
-  color: #ffffff;
-}
-
-.purple:hover {
-  color: var(--darkPurple);
-  background-color: rgba(0, 0, 0, 0);
-}
 @media (min-height: 600px) {
   .window {
     width: 40%;
@@ -214,4 +181,84 @@ body {
   border-radius: 50px;
   width: fit-content;
   padding: 0.4rem 2rem;
+}
+
+.btnContainer {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.btnn {
+  position: relative;
+  display: inline-block;
+  border-radius: 3rem;
+  text-decoration: none;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--darkPurple);
+
+  width: 9.5rem;
+  padding: 0.2rem;
+}
+
+.btnnWhite {
+  background-color: var(--darkPurple);
+}
+
+.btn_title {
+  font-weight: 600;
+  font-size: 1rem;
+  position: absolute;
+  color: var(--darkPurple);
+  display: block;
+  text-transform: uppercase;
+  z-index: 4;
+}
+.titleWhite {
+  color: white;
+}
+
+.btn_bg {
+  position: relative;
+  width: inherit;
+  height: 2.3rem;
+  background-color: white;
+  z-index: 2;
+  border-radius: 50px;
+}
+
+.purple {
+  background-color: white;
+}
+.btn_bg-img {
+  display: block;
+  position: absolute;
+  width: 450px;
+  z-index: 3;
+  transform: translateY(130px);
+
+  transition: transform 1s;
+}
+
+.btnn:hover .btn_bg-img {
+  transform: translateY(14px);
+}
+
+.reverse {
+  transform: translateY(14px);
+  transition: 1s;
+}
+
+.btnn:hover .reverse {
+  transform: translateY(130px);
+}
+
+.btnn:hover .btn_title {
+  color: white;
+}
+
+.btnn:hover .titleWhite {
+  color: var(--darkPurple);
 }

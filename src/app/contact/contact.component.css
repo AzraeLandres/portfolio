@@ -58,12 +58,22 @@ input:focus {
 }
 
 textarea {
+  background: #ffffff00;
   margin-top: 1rem;
   width: 95%;
   border: 1px solid var(--darkPurple);
   border-radius: 0.5rem;
 }
 
+textarea:focus {
+  outline: none;
+  border: 1px solid var(--darkPurple);
+  background: #ffffff;
+}
+
+.warning {
+  color: var(--darkOrange);
+}
 .btnContainer {
   text-align: center;
 }

@@ -30,7 +30,9 @@
           <div
             *ngIf="myForm.submitted && contactForm.controls['firstName'].errors"
           >
-            <span *ngIf="contactForm.controls['firstName'].errors?.['required']"
+            <span
+              class="warning"
+              *ngIf="contactForm.controls['firstName'].errors?.['required']"
               >Ce champ est requis</span
             >
           </div>
@@ -46,7 +48,9 @@
           <div
             *ngIf="myForm.submitted && contactForm.controls['lastName'].errors"
           >
-            <span *ngIf="contactForm.controls['lastName'].errors?.['required']"
+            <span
+              class="warning"
+              *ngIf="contactForm.controls['lastName'].errors?.['required']"
               >Ce champ est requis</span
             >
           </div>
@@ -68,6 +72,7 @@
             "
           >
             <span
+              class="warning"
               *ngIf="contactForm.controls['phoneNumber'].errors?.['required']"
               >Ce champ est requis</span
             >
@@ -88,10 +93,13 @@
             "
           >
             <span
+              class="warning"
               *ngIf="contactForm.controls['emailAddress'].errors?.['required']"
               >Ce champ est requis</span
             >
-            <span *ngIf="contactForm.controls['emailAddress'].errors?.['email']"
+            <span
+              class="warning"
+              *ngIf="contactForm.controls['emailAddress'].errors?.['email']"
               >L'adresse email doit être valide</span
             >
           </div>
@@ -110,7 +118,9 @@
           <div
             *ngIf="myForm.submitted && contactForm.controls['subject'].errors"
           >
-            <span *ngIf="contactForm.controls['subject'].errors?.['required']"
+            <span
+              class="warning"
+              *ngIf="contactForm.controls['subject'].errors?.['required']"
               >Ce champ est requis</span
             >
           </div>
@@ -127,8 +137,21 @@
           <div
             *ngIf="myForm.submitted && contactForm.controls['message'].errors"
           >
-            <span *ngIf="contactForm.controls['message'].errors?.['required']"
+            <span
+              class="warning"
+              *ngIf="contactForm.controls['message'].errors?.['required']"
               >Ce champ est requis</span
+            >
+          </div>
+          <div class="rgpd inputContainer full">
+            <input type="checkbox" name="rgpd" id="rgpd" />
+            <label for="rgpd"
+              >J'autorise ce site à conserver mes données personnelles
+              transmises via ce formulaire. Aucune exploitation commerciale ne
+              sera faite des données conservées. Voir la
+              <a href=""
+                >politique de gestion des données personnelles</a
+              ></label
             >
           </div>
         </div>
