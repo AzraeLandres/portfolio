@@ -1,6 +1,14 @@
-.nav {
-  font-family: "Quicksand";
-  font-size: 22px;
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+a:hover {
+  color: var(--darkPurple);
+}
+
+nav {
+  font-size: 1.1rem;
   height: 50px;
   width: 80%;
   margin: 1rem auto;
@@ -8,90 +16,67 @@
   position: relative;
   border-radius: 2rem;
   box-shadow: 0px 0px 10px 0px rgb(223, 223, 223);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.nav > .nav-header {
-  display: inline;
+nav .img {
+  margin-left: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.nav > .nav-header > .nav-title {
-  display: inline-block;
-  cursor: pointer;
-  padding: 10px 10px 12px 2.5rem;
-}
 img {
-  height: 2rem;
+  width: 2.5rem;
+}
+nav .links {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-right: 1.5rem;
 }
 
-.nav > .nav-btn {
+#icons {
+  cursor: pointer;
   display: none;
 }
 
-.nav > .nav-links {
-  display: inline;
-  float: right;
-  font-size: 18px;
-}
-
-.nav > .nav-links > a {
-  display: inline-block;
-  padding: 13px 2.5rem 13px 10px;
-  text-decoration: none;
-  color: #363636;
-}
-
-.nav > .nav-links > a:hover {
-  color: #8873a6;
-}
-
-.nav > #nav-check {
-  display: none;
-}
-
-@media (max-width: 710px) {
-  .nav > .nav-btn {
-    display: inline-block;
-    position: absolute;
-    right: 0px;
-    top: 0px;
+@media (max-width: 600px) {
+  #icons {
+    display: block;
+    margin-right: 1.5rem;
   }
-  .nav > .nav-btn > label {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 13px;
+
+  #icons::before {
+    content: url("../../assets/menuOpen.svg");
   }
-  .nav > .nav-btn > label:hover,
-  .nav #nav-check:checked ~ .nav-btn > label {
+
+  .active #icons::before {
+    content: url("../../assets/menuClose.svg");
+  }
+
+  nav .links {
+    display: none;
+    transition: 1s;
+  }
+  .links a {
+    margin-left: 1rem;
+    padding: 3px 0;
+  }
+
+  nav.active .links {
+    display: flex;
+    top: 4.125rem;
+    padding: 1rem;
+    position: fixed;
+    border-radius: 20px;
+    flex-direction: column;
     background-color: white;
-  }
-  .nav > .nav-btn > label > span {
-    display: block;
-    width: 25px;
-    height: 10px;
-    border-top: 2px solid #eee;
-  }
-  .nav > .nav-links {
-    position: absolute;
-    display: block;
-    width: 100%;
-    background-color: white;
-    height: 0px;
-    transition: all 0.3s ease-in;
-    overflow-y: hidden;
-    top: 50px;
-    left: 0px;
-    box-shadow: 0px 0px 10px 0px rgba(235, 235, 235, 1);
-  }
-  .nav > .nav-links > a {
-    display: block;
-    width: 100%;
-  }
-  .nav > #nav-check:not(:checked) ~ .nav-links {
-    height: 0px;
-  }
-  .nav > #nav-check:checked ~ .nav-links {
-    height: calc(100vh - 50px);
-    overflow-y: auto;
+    width: 80%;
+    align-items: start;
+    box-shadow: 0px 0px 10px 0px rgb(223, 223, 223);
   }
 }

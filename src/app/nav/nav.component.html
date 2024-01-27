@@ -1,4 +1,4 @@
-<header>
+<!--<header>
   <div class="nav">
     <input type="checkbox" id="nav-check" />
     <div class="nav-header">
@@ -15,10 +15,24 @@
     </div>
 
     <div class="nav-links">
-      <a routerLink="home">Accueil</a>
-      <a routerLink="portfolio">Portfolio</a>
-      <a routerLink="about">À propos</a>
-      <a routerLink="contact">Contact</a>
+      <a (click)="toggle()" routerLink="home">Accueil</a>
+      <a (click)="toggle()" routerLink="portfolio">Portfolio</a>
+      <a (click)="toggle()" routerLink="about">À propos</a>
+      <a (click)="toggle()" routerLink="contact">Contact</a>
     </div>
   </div>
-</header>
+</header>-->
+
+<nav id="nav">
+  <div class="img">
+    <img routerLink="home" src="../../assets/logoP.svg" alt="logo AZL" />
+  </div>
+
+  <div class="links">
+    <a (click)="navFunc()" routerLink="home">Accueil</a>
+    <a (click)="navFunc()" routerLink="portfolio">Portfolio</a>
+    <a (click)="navFunc()" routerLink="about">À propos</a>
+    <a (click)="navFunc()" routerLink="contact">Contact</a>
+  </div>
+  <div id="icons" (click)="navFunc()"></div>
+</nav>
