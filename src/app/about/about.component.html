@@ -1,5 +1,7 @@
 <main class="container flex">
-  <div class="containerTop flex">
+  <div class="containerTop">
+    <!-- partie du haut -->
+
     <div class="topLeft">
       <div class="window flex item-a">
         <div class="top flex">
@@ -24,75 +26,83 @@
         </section>
       </div>
     </div>
-    <div class="topMiddle">
-      <div class="window flex item-b">
-        <div class="top flex">
-          <div class="circles flex">
-            <div class="circle red"></div>
-            <div class="circle yellow"></div>
-            <div class="circle green"></div>
-          </div>
-          <div class="tab">
-            <div id="ico">
-              <img id="logo" src="../assets/logoP.svg" alt="" />
+    <!-- partie droite du haut  -->
+    <div class="topRight flex">
+      <div class="tLeft">
+        <div class="window flex item-b">
+          <div class="top flex">
+            <div class="circles flex">
+              <div class="circle red"></div>
+              <div class="circle yellow"></div>
+              <div class="circle green"></div>
             </div>
-            <span id="span">À propos</span>
+            <div class="tab">
+              <div id="ico">
+                <img id="logo" src="../assets/logoP.svg" alt="" />
+              </div>
+              <span id="span">À propos</span>
+            </div>
           </div>
+          <section class="tLeftBottom">
+            <h2>Logiciels</h2>
+            <article class="tags flex">
+              <div class="tag blue">Photoshop</div>
+              <div class="tag orange">Illustrator</div>
+              <div class="tag pink">Figma</div>
+              <div class="tag blue">Jira</div>
+            </article>
+          </section>
         </div>
-        <section class="topMiddleBottom">
-          <h2>Logiciels</h2>
-          <article class="tags flex">
-            <div class="tag blue">Photoshop</div>
-            <div class="tag orange">Illustrator</div>
-            <div class="tag pink">Figma</div>
-            <div class="tag blue">Jira</div>
-          </article>
-        </section>
       </div>
-    </div>
-    <div class="topRight">
-      <div class="window flex item-c">
-        <div class="top flex">
-          <div class="circles flex">
-            <div class="circle red"></div>
-            <div class="circle yellow"></div>
-            <div class="circle green"></div>
-          </div>
-          <div class="tab">
-            <div id="ico">
-              <img id="logo" src="../assets/logoP.svg" alt="" />
+      <div class="tRight">
+        <div class="window flex item-c">
+          <div class="top flex">
+            <div class="circles flex">
+              <div class="circle red"></div>
+              <div class="circle yellow"></div>
+              <div class="circle green"></div>
             </div>
-            <span id="span">À propos</span>
+            <div class="tab">
+              <div id="ico">
+                <img id="logo" src="../assets/logoP.svg" alt="" />
+              </div>
+              <span id="span">À propos</span>
+            </div>
           </div>
+          <section class="tRightBottom">
+            <h2>Où me retrouver</h2>
+            <article class="links flex">
+              <div class="link flex">
+                <img
+                  class="icon"
+                  src="../../assets/linkedin.svg"
+                  alt="icone linkedin"
+                />
+                <a
+                  href="https://www.linkedin.com/in/azraellandres/"
+                  target="_blank"
+                  >linkedin.com/in/azraellandres</a
+                >
+              </div>
+              <div class="link flex">
+                <img
+                  class="icon"
+                  src="../../assets/behance.svg"
+                  alt="icone behance"
+                />
+                <a href="https://www.behance.net/azrallandres" target="_blank"
+                  >behance.net/azrallandres</a
+                >
+              </div>
+            </article>
+          </section>
         </div>
-        <section class="topRightBottom">
-          <h2>Où me retrouver</h2>
-          <article class="links">
-            <div class="link flex">
-              <img
-                class="icon"
-                src="../../assets/linkedin.svg"
-                alt="icone linkedin"
-              />
-              <a href="linkedin.com/in/azraellandres" target="_blank"
-                >linkedin.com/in/azraellandres</a
-              >
-            </div>
-            <div class="link flex">
-              <img
-                class="icon"
-                src="../../assets/behance.svg"
-                alt="icone behance"
-              />
-              <a href="behance.net/azrallandres" target="_blank"
-                >behance.net/azrallandres</a
-              >
-            </div>
-          </article>
-        </section>
       </div>
     </div>
   </div>
+
+  <!-- partie du bas -->
+
   <div class="containerBottom flex">
     <div class="bottomLeft">
       <div class="window flex item-d">
@@ -157,10 +167,4 @@
       </div>
     </div>
   </div>
-  <!--
-
-
-  
-
-
---></main>
+</main>
