@@ -28,6 +28,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   height: 98vh;
+  padding-bottom: 2rem;
 }
 
 .flex {
@@ -98,16 +99,18 @@ body {
   margin: 0 auto;
 }
 #span {
-  font-family: "Quicksand";
   display: inline-block;
   width: 60%;
 }
 
+main {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
 @media (min-height: 600px) {
   .window {
     width: 40%;
     height: min-content;
-    margin: 8rem auto;
   }
 }
 

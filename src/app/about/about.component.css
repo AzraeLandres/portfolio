@@ -41,12 +41,22 @@ img {
   flex-wrap: wrap;
 }
 
+.link {
+  cursor: pointer;
+}
 .icon {
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
   margin-right: 1rem;
+  transition: 0.2s;
 }
 
+.icon:hover {
+  transform: scale(1.2);
+}
+.item-c {
+  width: min-content;
+}
 .containerBottom {
   flex-wrap: wrap;
 }
@@ -102,8 +112,7 @@ a {
     width: 50%;
   }
 
-  .item-b,
-  .item-c {
+  .item-b {
     width: 70%;
   }
 }
@@ -149,10 +158,6 @@ a {
   .item-d,
   .item-e {
     width: 90%;
-  }
-
-  .item-e {
-    margin-top: -0.5rem;
   }
 
   .item-b,

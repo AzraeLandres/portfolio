@@ -32,13 +32,13 @@
   padding: 1rem;
   width: 15rem;
   min-width: 15rem;
-  height: 24rem;
+  height: 100%;
   min-height: min-content;
 }
 
 .cardImg {
   background-color: white;
-  height: 60%;
+  height: 10rem;
   min-height: 60%;
   border-radius: 1rem;
 }
@@ -63,5 +63,12 @@ h3 {
 @media (max-width: 600px) {
   .slider {
     flex-wrap: wrap;
+  }
+}
+
+@media (min-height: 600px) {
+  .window {
+    margin: 2rem auto;
+    width: 70%;
   }
 }
