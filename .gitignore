@@ -39,3 +39,8 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+
+# Ignore all local .env files
+.env.local  
+

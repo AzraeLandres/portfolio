@@ -25,6 +25,17 @@ img {
   width: 8rem;
 }
 
+.topRight {
+  flex-wrap: wrap;
+}
+
+.tRight,
+.tLeft {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .tLeftBottom,
 .tRightBottom,
 .bottomLeftBottom,
@@ -74,7 +85,7 @@ a {
   height: 0.75rem;
   width: 0.75rem;
 }
-@media (min-width: 767px) {
+@media (min-width: 600px) {
   .container {
     flex-direction: row;
   }
@@ -90,13 +101,19 @@ a {
     flex-direction: column;
   }
 
-  .topLeft {
+  .containerTop {
+    display: flex;
     width: 100%;
   }
 
+  .topLeft {
+    width: 30%;
+  }
+
   .topRight {
-    width: 100%;
+    width: 70%;
     flex-direction: row;
+    flex-wrap: nowrap;
   }
 
   .tLeft,
@@ -112,8 +129,10 @@ a {
     width: 50%;
   }
 
-  .item-b {
-    width: 70%;
+  .item-b,
+  .item-d,
+  .item-e {
+    width: 90%;
   }
 }
 
@@ -195,6 +214,6 @@ a {
   }
 
   .item-c {
-    width: 70%;
+    width: 80%;
   }
 }

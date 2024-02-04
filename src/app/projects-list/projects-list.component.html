@@ -1,0 +1,35 @@
+<h2 class="title purpleTag">Développement</h2>
+
+<div class="slider">
+  <div *ngFor="let project of projects">
+    <div class="cardContainer" *ngIf="hasSkill(project, 'Développement')">
+      <div class="cardImg">
+        <img [src]="project.link" alt="placeholder" />
+      </div>
+      <h3>{{ project.name }}</h3>
+      <div class="tagContainer">
+        <span class="tag blue" *ngFor="let tags of project.tags">{{
+          tags.name
+        }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2 class="title purpleTag">Design</h2>
+
+<div class="slider full">
+  <div *ngFor="let project of projects">
+    <div class="cardContainer" *ngIf="hasSkill(project, 'Design')">
+      <div class="cardImg">
+        <img [src]="project.link" alt="placeholder" />
+      </div>
+      <h3>{{ project.name }}</h3>
+      <div class="tagContainer">
+        <span class="tag blue" *ngFor="let tags of project.tags">{{
+          tags.name
+        }}</span>
+      </div>
+    </div>
+  </div>
+</div>

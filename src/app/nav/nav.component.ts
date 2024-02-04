@@ -15,5 +15,6 @@ export class NavComponent {
       nav?.classList.add('active');
     }
   }
+
   constructor() {}
 }
